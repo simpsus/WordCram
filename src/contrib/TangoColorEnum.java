@@ -1,8 +1,5 @@
 package contrib;
 
-import processing.core.PApplet;
-import wordcram.Word;
-import wordcram.WordColorer;
 
 public enum TangoColorEnum {
 	

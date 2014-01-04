@@ -3,7 +3,6 @@ package contrib;
 import java.util.Random;
 
 import processing.core.PApplet;
-import wordcram.Observer;
 import wordcram.Word;
 import wordcram.WordColorer;
 

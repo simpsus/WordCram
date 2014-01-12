@@ -25,7 +25,7 @@ public class RendererAwareWordCramEngine extends WordCramEngine {
 				shaper, bbTreeBuilder, renderOptions, observer);
 	}
 
-	protected void drawAllWithoutFinish() {
+	protected void drawAll() {
 		observer.beginDraw();
     	while(hasMore()) {
             drawNext();

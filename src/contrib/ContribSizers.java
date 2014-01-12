@@ -4,6 +4,14 @@ import wordcram.Word;
 import wordcram.WordSizer;
 
 public class ContribSizers {
+	
+	public static WordSizer byWeight(final int minSize, final int maxSize) {
+		return byWeightOrRankPowered(minSize, maxSize, true, 1);
+	}
+	
+	public static WordSizer byRank(final int minSize, final int maxSize) {
+		return byWeightOrRankPowered(minSize, maxSize, false, 1);
+	}
 
 	public static WordSizer byWeightSquare(final int minSize, final int maxSize) {
 		return byWeightOrRankPowered(minSize, maxSize, true, 2);

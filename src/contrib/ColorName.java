@@ -14,9 +14,15 @@ public class ColorName {
 	
 	public ColorName(String name, int red, int green, int blue) {
 		super();
-		name = name.replaceAll("\\s+","");
 		if (name.contains("(")) {
 			name = name.substring(0,name.indexOf("("));
+		}
+		if (name.contains(" ")) {
+			String[] parts = name.split(" ");
+			name = "";
+			for (String part: parts) {
+				name += part.substring(0,1).toUpperCase() + part.substring(1).toLowerCase();
+			}
 		}
 		this.name = name;
 		this.red = red;

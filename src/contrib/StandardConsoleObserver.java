@@ -26,6 +26,11 @@ public class StandardConsoleObserver implements Observer {
 		wdf = new DecimalFormat("0.##");
 	}
 
+	public StandardConsoleObserver(int level) {
+		this();
+		withLevel(level);
+	}
+
 	public void wordsCounted(Word[] words) {
 		this.words = words;
 	}
@@ -76,8 +81,9 @@ public class StandardConsoleObserver implements Observer {
 		return level;
 	}
 
-	public void setLevel(int level) {
+	public StandardConsoleObserver withLevel(int level) {
 		this.level = level;
+		return this;
 	}
 
 }

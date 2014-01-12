@@ -32,6 +32,7 @@ public abstract class AbstractSketch extends PApplet{
 		imageShape = new ImageShaper().shape(image, getShapeColor());
 		standardPlacer = true;
 		observer = new StandardConsoleObserver();
+		observer.withLevel(3);
 	}
 	
 	public abstract int getShapeColor();

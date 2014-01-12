@@ -62,6 +62,6 @@ public class RendererAwareWordCram extends WordCram {
     }
 
 	public void drawAllWithoutFinish() {
-		((RendererAwareWordCramEngine) getWordCramEngine()).drawAllWithoutFinish();
+		((RendererAwareWordCramEngine) getWordCramEngine()).drawAll();
 	}
 }

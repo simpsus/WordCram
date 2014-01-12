@@ -1,14 +1,16 @@
 package sketch;
 
+import contrib.ImageBasedWordColorer;
+
 
 public class MetallicaSketch extends AbstractSketch {
 
 	@Override
 	protected void prepareCram() {
-		cram.minShapeSize(5)
+		cram.minShapeSize(1)
 		.withFont("Futura-CondensedExtraBold")
-		.withColor(color(11, 0, 0))
-		.sizedByWeight(8, 40);
+		.withColorer(new ImageBasedWordColorer(loadImage("/home/bastian/Dropbox/Camera Uploads/crams/ideas/Metallica-metallica.jpeg")))
+		.sizedByWeight(3, 30);
 	}
 
 	@Override
@@ -18,23 +20,23 @@ public class MetallicaSketch extends AbstractSketch {
 
 	@Override
 	public int getWidth() {
-		return 2250;
+		return 900;
 	}
 
 	@Override
 	public int getHeight() {
-		return 600;
+		return 700;
 	}
 
 	@Override
 	public String getImageLocation() {
-		return "/home/bastian/Dropbox/Camera Uploads/crams/ideas/metallica_logo.png";
+		return "/home/bastian/Dropbox/Camera Uploads/crams/ideas/Metallica-metallica-stencil_2.png";
 	}
 
 	@Override
 	public String getTextLocation() {
 		return "/home/bastian/Dropbox/Camera Uploads/crams/ideas/metallicaLyrics.txt";
 	} 
-		
+	
 
 }
